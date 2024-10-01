@@ -1,3 +1,5 @@
+#Only works with the website autotrader.com
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -6,7 +8,7 @@ page = requests.get(URL)
 
 soup = BeautifulSoup(page.content, "html.parser")
 results = soup.find(id="srp-listings")
-cars = results.find_all("div", class_="col-xs-12 col-sm-4 display-flex")
+cars = results.find_all(class_="col-xs-12 col-sm-4 display-flex", limit=10)
 print(len(cars))
 
 for car in cars:
