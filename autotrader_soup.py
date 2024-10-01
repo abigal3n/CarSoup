@@ -15,8 +15,8 @@ for car in cars:
     car_mileage = car.find("div", class_="text-bold text-subdued-lighter margin-top-3")
     
     #print(car, end="\n"*2)
-    print(car_title)
-    print(car_price)
-    print(car_mileage)
+    print("Car: " + car_title.text.strip())
+    print("Price: $" + car_price.text.strip())
+    print("Mileage: " + car_mileage.text.strip())
     print()
 #print(results.prettify)
