@@ -8,7 +8,8 @@ page = requests.get(URL)
 
 soup = BeautifulSoup(page.content, "html.parser")
 results = soup.find(id="srp-listings")
-cars = results.find_all(class_="col-xs-12 col-sm-4 display-flex", limit=10)
+cars = results.find_all(class_="col-xs-12 col-sm-4 display-flex")
+#car_elements = [div_element.parent.parent.parent for div_element in cars]
 print(len(cars))
 
 for car in cars:
