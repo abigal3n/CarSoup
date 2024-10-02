@@ -14,6 +14,11 @@ results = soup.find(id="srp-listings")
 repeat = True
 
 while(repeat):
+    URL = "https://www.autotrader.com/cars-for-sale/port-st-lucie-fl"
+    page = requests.get(URL)
+
+    soup = BeautifulSoup(page.content, "html.parser")
+    results = soup.find(id="srp-listings")
     cars = results.find_all(class_="col-xs-12 col-sm-4 display-flex")
     more = input("Would you like more cars? Type more or m for more options")
     if more == "more" or  more == "m":
