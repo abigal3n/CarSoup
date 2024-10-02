@@ -12,6 +12,7 @@ results = soup.find(id="srp-listings")
 #car_elements = [div_element.parent.parent.parent for div_element in cars]
 #print(len(cars))
 repeat = True
+#maybe have it iterate until specified number of cars meeting the criteria have been added to a list
 
 while(repeat):
     URL = "https://www.autotrader.com/cars-for-sale/port-st-lucie-fl"
