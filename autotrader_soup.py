@@ -30,14 +30,14 @@ while(repeat):
             comma = ","
             cpt = car_price.text.replace(comma, "")
             print(cpt)
-            if int(cpt) < 3000:
+            #if int(cpt) < 3000:
             #print(car, end="\n"*2)
-                print("Car: " + car_title.text.strip())
-                print("Price: $" + cpt.strip())
-                print("Mileage: " + car_mileage.text.strip())
-                print()
-            else:
-                print("no cars under 3000")
+            print("Car: " + car_title.text.strip())
+            print("Price: $" + cpt.strip())
+            print("Mileage: " + car_mileage.text.strip())
+            print()
+            #else:
+                #print("no cars under 3000")
     else:
         print("Have a nice day")
         break
